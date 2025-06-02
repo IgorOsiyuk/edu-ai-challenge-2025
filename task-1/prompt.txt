@@ -1,0 +1,28 @@
+Task:
+    Select the most suitable database type for a large-scale social platform based on its requirements using Chain-of-Thought (CoT) reasoning.
+
+Context: 
+    The platform will serve 10-50 million active users with peak loads of 100k requests/second. The platform must store user profiles, posts, and connections between users. It has a predominantly read-heavy workload (80% read operations, 20% write operations) and requires high scalability and fast query performance. The database choice must optimize for these factors while accommodating complex relationship modeling.
+
+Approach:
+    Categorize the platform's needs, including scalability, read-heavy workload optimization, relationship management, and performance considerations.
+    Compare relational, document, graph, and columnar databases, analyzing their strengths and weaknesses relative to the requirements.
+    Determine the most suitable database type based on logical reasoning, considering scalability, query speed, and relationship handling.
+    Discuss indexing, replication, caching strategies, and other optimizations that enhance performance.
+    Provide implementation roadmap and migration considerations
+
+Requirements:
+    Support for millions of users with scalable infrastructure.
+    Efficient storage and retrieval of user profiles, posts, and connections.
+    Optimized read operations due to high query volume.
+    Reliable and flexible relationship modeling for user interactions.
+    Low-latency data access for real-time performance.
+
+Additional notes: 
+    Analyze a given set of project requirements.
+    Justify and select the most suitable type of database for the project.
+    Reasoning should be step-by-step and well-structured
+    Showing how the decision was made based on the requirements.
+
+Expected Result:
+    Step-by-step reasoning process with quantitative scoring, final recommendation with justification, and implementation strategy including potential risks and mitigation approaches.
