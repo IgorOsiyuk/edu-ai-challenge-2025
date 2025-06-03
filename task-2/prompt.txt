@@ -1,0 +1,17 @@
+Task: Convert the bug report [User's note] into a structured bug ticket. Create a clear and detailed report that includes a Title, Description, Steps to Reproduce, Expected vs Actual Behavior, Environment, Severity or Impact:
+
+Input (Bug Report): [User's note]
+
+Output Format:
+    Title: Brief issue summary.
+    Description: Concise explanation of the problem, including its context and any relevant observations.
+    Steps to Reproduce: A detailed, step-by-step guide on how to trigger the bug.
+    Expected vs Actual Behavior: Clearly define the intended functionality versus the observed outcome. Mention any attempted debugging steps, logs, screenshots, or additional details that help confirm the issue
+    Environment (if available): 
+        Browser:  (e.g., Chrome 90, Firefox 89)
+        OS: (e.g., Windows 10, macOS Monterey)
+        Device type:  (e.g., Desktop, Tablet, Mobile)
+    Severity or Impact: Indicate how the issue affects usability, functionality, or user experience (e.g., blocker, critical, minor).
+
+
+Input (Bug Report):  “Logout button doesn’t work on Safari. It just doesn’t respond.”
