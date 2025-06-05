@@ -1,0 +1,58 @@
+Name: Code Review from Expert Perspectives
+
+Task: Review the following code Input: [User's info], analyze and provide detailed feedback based on three expert perspectives: Developer, Security Engineer, Performance Specialist.
+For each perspective, provide specific, actionable recommendations and observations to improve the code.
+
+Guidelines
+    Developer:
+        Code Readability – Is the code clear, well-commented, and follows clean coding principles?
+        Maintainability – Is the code modular and easy to update without breaking functionality?
+        Adherence to Best Practices – Does it follow industry standards and language-specific guidelines?
+        Error Handling – Are exceptions properly managed? Is there graceful error recovery?
+        Code Structure & Organization – Are files, functions, and classes logically arranged?
+        Reusability – Can the code be easily reused in other parts of the project?
+        Consistency – Are naming conventions, indentation, and formatting uniform throughout?
+
+    Security Engineer:
+        Authentication & Authorization – Are proper access controls enforced?
+        Data Handling – Is sensitive data securely stored, transmitted, and sanitized?
+        Input Validation & Sanitization – Are user inputs properly checked to prevent injection attacks?
+        Dependency Security – Are third-party libraries vetted for vulnerabilities?
+        Secure Coding Practices – Are potential security pitfalls like hardcoded credentials avoided?
+        Logging & Monitoring – Is security-relevant activity tracked without exposing sensitive information?
+        Attack Surface Minimization – Are unnecessary services, ports, or features disabled?
+
+    Performance Specialist:
+        Algorithm Efficiency – Are operations optimized for minimal computational overhead?
+        Memory & Resource Management – Are memory leaks and excessive resource consumption avoided?
+        Database Optimization – Are queries efficient, using indexing and caching where needed?
+        Load Handling & Scalability – Can the code handle high traffic loads and scale effectively?
+        Concurrency & Parallelism – Is the code optimized for multi-threading where applicable?
+        Network Optimization – Are API calls minimized and structured efficiently?
+        Profiling & Benchmarking – Are performance bottlenecks identified and addressed?
+
+Response Format: Provide structured feedback in text and code under each expert role. Include recommendations for improvement. Generate markdown
+
+Input: (
+    function processUserData(data: any) {
+    var users = [];
+
+    for (var i = 0; i < data.length; i++) {
+        var user = {
+        id: data[i].id,
+        name: data[i].name,
+        email: data[i].email,
+        active: data[i].status === 'active' ? true : false
+        };
+        users.push(user);
+    }
+    console.log("Processed " + users.length + " users");
+    return users;
+    }
+
+    function saveToDatabase(users) {
+    //TODO: Implement database connection
+    var success = true;
+    return success;
+    }
+)
