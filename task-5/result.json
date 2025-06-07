@@ -46,6 +46,16 @@
         "Technical specifications"
       ],
       "userExpertise": "Experienced"
+    },
+    {
+      "sentiment": "Neutral",
+      "isRelevant": false,
+      "mainSubject": null,
+      "positives": [],
+      "painPoints": [],
+      "improvementSuggestions": [],
+      "featuresMentioned": [],
+      "userExpertise": "Unknown"
     }
   ]
 }
