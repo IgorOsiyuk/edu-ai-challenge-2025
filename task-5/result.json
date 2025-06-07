@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "sentiment": "Negative",
+      "isRelevant": true,
+      "mainSubject": "Performance and reliability issues",
+      "positives": [],
+      "painPoints": [
+        "Sensor stops tracking for half a second frequently",
+        "Issue persists even at 8000hz polling rate",
+        "Problem occurs in both wireless and wired modes",
+        "Defective dongle in first unit requiring return",
+        "High price point ($150) despite serious defects"
+      ],
+      "improvementSuggestions": [
+        "Improve sensor tracking stability",
+        "Enhance quality control for dongles before shipping",
+        "Reconsider pricing given quality issues"
+      ],
+      "featuresMentioned": [
+        "Sensor tracking",
+        "Polling rate (8000hz)",
+        "Wireless connectivity",
+        "Dongle",
+        "Price"
+      ],
+      "userExpertise": "Experienced"
+    },
+    {
+      "sentiment": "Mixed",
+      "isRelevant": true,
+      "mainSubject": "Value proposition and price-performance ratio",
+      "positives": ["Product has no flaws", "High quality execution"],
+      "painPoints": [
+        "Price not justified by performance benefits",
+        "Similar performance achievable with cheaper alternatives"
+      ],
+      "improvementSuggestions": [
+        "Adjust pricing strategy to improve competitiveness",
+        "Add unique features that justify premium pricing"
+      ],
+      "featuresMentioned": [
+        "Overall product quality",
+        "Price",
+        "Performance",
+        "Technical specifications"
+      ],
+      "userExpertise": "Experienced"
+    }
+  ]
+}
