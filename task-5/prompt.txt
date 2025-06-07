@@ -76,7 +76,7 @@ Feedback examples:
     }
 
 Chain-of-Thought Reasoning: 
-    Determine if the feedback is related to the product.
+    Determine if the feedback is related to the product and reason why it relevant 
     If not relevant, set "isRelevant": false and skip further analysis.
 
 Output Formatting (JSON Structure): 
