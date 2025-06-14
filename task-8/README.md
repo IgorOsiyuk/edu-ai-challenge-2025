@@ -439,12 +439,6 @@ const configSchema = Schema.object({
 
 MIT License - see LICENSE file for details.
 
-## 🔗 Links
-
-- [GitHub Repository](https://github.com/example/robust-validation-library)
-- [Issue Tracker](https://github.com/example/robust-validation-library/issues)
-- [Documentation](https://github.com/example/robust-validation-library#readme)
-
 ---
 
 Built with ❤️ for robust data validation in JavaScript.
