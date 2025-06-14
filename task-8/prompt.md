@@ -37,3 +37,11 @@ Develop a robust validation library in JavaScript to validate complex data struc
 - Ensure performance optimization to handle large-scale data validation efficiently.
 - Follow industry standards for data integrity and security.
 - Save prompt in prompt.md
+
+### Architecture Enhancement:
+
+- Separate core functionality and usage of library into distinct files
+- Create core library file (`index.js`) containing only validation classes and logic
+- Create separate examples file (`examples.js`) demonstrating library usage
+- Update all documentation to reflect the new modular structure
+- Update package.json to point to the new main entry file

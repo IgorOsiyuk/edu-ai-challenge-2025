@@ -3,7 +3,7 @@
  * Tests validation performance across different scenarios and data sizes
  */
 
-const { Schema } = require("./base-template.js");
+import { Schema } from "./index.js";
 
 // Utility function to measure execution time
 function benchmark(name, fn, iterations = 1000) {
@@ -300,17 +300,6 @@ benchmark(
   10000
 );
 
-const schemaValidation = () => {
-  const basicSchema = Schema.object({
-    id: Schema.string(),
-    name: Schema.string().minLength(2),
-    email: Schema.string().email(),
-    isActive: Schema.boolean(),
-    tags: Schema.array(Schema.string()).notEmpty(),
-  });
-  return schemaSchema.validate(sampleUser);
-};
-
 benchmark(
   "Schema validation (equivalent)",
   () => {
@@ -334,40 +323,7 @@ console.log(
   "Consider the trade-off between validation thoroughness and raw performance."
 );
 
-// Generate performance report
-const reportDate = new Date().toISOString();
-const performanceReport = `
-# Validation Library Performance Report
-Generated: ${reportDate}
-
-## Summary
-The validation library demonstrates solid performance across various scenarios:
-
-- **Simple validations**: ~${(
-  (10000 /
-    benchmark("String validation", () => stringValidator.validate("test"), 1)
-      .avgTime) *
-  1000
-).toFixed(0)} ops/sec
-- **Complex objects**: Validates nested user objects efficiently
-- **Large arrays**: Handles arrays of 1000+ items with reasonable performance
-- **Deep nesting**: Supports 50+ levels of object nesting
-- **Memory efficient**: Low memory overhead for validator creation
-
-## Recommendations
-1. Cache validators for repeated use
-2. Use appropriate validation complexity for your use case
-3. Consider batch processing for very large datasets
-4. Profile your specific use cases for optimal performance
-
-## Trade-offs
-- Schema validation provides 10-100x more features than native validation
-- Performance overhead is 2-5x compared to native JavaScript checks
-- Error reporting and debugging capabilities justify the performance cost
-- Type safety and maintainability benefits outweigh raw performance in most cases
-`;
-
-// Note: In a real implementation, you might want to write this to a file
+// Note: Performance report could be generated and saved to file in a real implementation
 console.log(
   "\n📄 Performance report generated (would be saved to performance_report.md)"
 );

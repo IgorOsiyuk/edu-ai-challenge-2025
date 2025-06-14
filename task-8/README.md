@@ -32,10 +32,29 @@ npm test
 npm run test:coverage
 ```
 
+## 🏗️ Architecture
+
+The library follows a **modular architecture** with clear separation of concerns:
+
+### **Core Files Structure**
+
+- **`index.js`** - Main library file containing core validation classes
+- **`examples.js`** - Comprehensive usage examples and demonstrations
+- **`base-template.js`** - Legacy file maintained for compatibility
+
+### **Modular Design Benefits**
+
+- **Clean Imports**: Import only core functionality without examples
+- **Better Performance**: Smaller bundle size when using as dependency
+- **Clear Separation**: Core logic separated from usage demonstrations
+- **Future Extensibility**: Easy to add new validator types
+
+📖 **For detailed architecture information, see [ARCHITECTURE.md](./ARCHITECTURE.md)**
+
 ## 🎯 Quick Start
 
 ```javascript
-const { Schema } = require("./base-template.js");
+import { Schema } from "./index.js";
 
 // Basic validation
 const nameValidator = Schema.string().minLength(2).maxLength(50);
@@ -53,7 +72,7 @@ if (result.isValid) {
 ### Schema Factory Methods
 
 ```javascript
-const { Schema } = require("./base-template.js");
+import { Schema } from "./index.js";
 
 // Create validators
 const stringValidator = Schema.string();
@@ -280,18 +299,26 @@ npm run benchmark
 
 ```
 task-8/
-├── base-template.js      # Main validation library
-├── validation.test.js    # Comprehensive test suite
-├── package.json          # Project configuration
-├── README.md            # Documentation
-├── prompt.md            # Task requirements
-└── benchmark.js         # Performance benchmarks
+├── index.js             # Core validation library
+├── examples.js          # Usage examples and demonstrations
+├── base-template.js     # Legacy file (maintained for compatibility)
+├── validation.test.js   # Comprehensive test suite
+├── benchmark.js         # Performance benchmarks
+├── package.json         # Project configuration
+├── README.md           # Documentation
+├── ARCHITECTURE.md     # Detailed architecture guide
+├── prompt.md           # Task requirements
+├── ENHANCEMENTS.md     # Enhancement report
+└── .gitignore          # Git ignore rules
 ```
 
 ### Running Examples
 
 ```bash
-# Validate the example data
+# Run usage examples
+npm run examples
+
+# Validate example data (alias for examples)
 npm run validate
 
 # Generate documentation

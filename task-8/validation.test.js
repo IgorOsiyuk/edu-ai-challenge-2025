@@ -3,7 +3,7 @@
  * Tests all validator types, edge cases, and performance scenarios
  */
 
-const {
+import {
   Schema,
   ValidationError,
   ValidationResult,
@@ -13,7 +13,7 @@ const {
   DateValidator,
   ArrayValidator,
   ObjectValidator,
-} = require("./base-template.js");
+} from "./index.js";
 
 describe("Validation Library", () => {
   describe("ValidationError", () => {

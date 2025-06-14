@@ -2,15 +2,17 @@
   "name": "robust-validation-library",
   "version": "1.0.0",
   "description": "A comprehensive JavaScript library for validating complex data structures with performance optimization and extensible architecture",
-  "main": "base-template.js",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch",
+    "test:coverage": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage",
     "test:coverage:report": "jest --coverage && echo 'Test coverage report generated in coverage/ directory' > test_report.txt && jest --coverage --verbose >> test_report.txt 2>&1",
-    "validate": "node base-template.js",
-    "lint": "eslint base-template.js validation.test.js",
-    "docs": "jsdoc base-template.js -d docs/",
+    "validate": "node examples.js",
+    "examples": "node examples.js",
+    "lint": "eslint index.js validation.test.js examples.js",
+    "docs": "jsdoc index.js -d docs/",
     "benchmark": "node benchmark.js"
   },
   "keywords": [
@@ -38,7 +40,7 @@
   "jest": {
     "testEnvironment": "node",
     "collectCoverageFrom": [
-      "base-template.js"
+      "index.js"
     ],
     "coverageDirectory": "coverage",
     "coverageReporters": [
