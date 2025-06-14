@@ -1,0 +1,101 @@
+Test coverage report generated in coverage/ directory
+PASS ./validation.test.js
+  Validation Library
+    ValidationError
+      √ should create error with message, path, and value (3 ms)
+      √ should create error with default path and value
+    ValidationResult
+      √ should create successful result (1 ms)
+      √ should create failed result with errors
+      √ should get first error message (1 ms)
+      √ should return null for first error when valid
+      √ should get all error messages (1 ms)
+    StringValidator
+      √ should validate string type
+      √ should reject non-string types (1 ms)
+      √ should validate minimum length (1 ms)
+      √ should validate maximum length (1 ms)
+      √ should validate pattern with regex
+      √ should throw error for invalid regex (25 ms)
+      √ should validate email format (1 ms)
+      √ should validate URL format (1 ms)
+      √ should validate non-empty strings (1 ms)
+      √ should support custom error messages
+      √ should support method chaining
+      √ should handle optional fields
+      √ should transform values before validation
+      √ should handle transform errors (1 ms)
+    NumberValidator
+      √ should validate number type
+      √ should reject non-number types (1 ms)
+      √ should reject NaN
+      √ should validate minimum value
+      √ should validate maximum value (1 ms)
+      √ should validate integer constraint
+      √ should validate positive numbers (1 ms)
+      √ should validate negative numbers
+      √ should support method chaining (1 ms)
+    BooleanValidator
+      √ should validate boolean type
+      √ should reject non-boolean types (1 ms)
+    DateValidator
+      √ should validate Date objects
+      √ should validate date strings (1 ms)
+      √ should reject invalid dates
+      √ should validate date after constraint (1 ms)
+      √ should validate date before constraint
+    ArrayValidator
+      √ should validate array type (1 ms)
+      √ should reject non-array types
+      √ should validate array items with item validator
+      √ should validate minimum length
+      √ should validate maximum length
+      √ should validate non-empty arrays (1 ms)
+      √ should provide path information for item validation errors
+    ObjectValidator
+      √ should validate object type (1 ms)
+      √ should reject non-object types
+      √ should validate object schema
+      √ should validate optional properties
+      √ should reject unknown properties by default (1 ms)
+      √ should allow unknown properties when configured
+      √ should provide path information for nested validation errors
+    Schema Factory
+      √ should create string validator
+      √ should create number validator
+      √ should create boolean validator
+      √ should create date validator (1 ms)
+      √ should create array validator
+      √ should create object validator
+    Complex Validation Scenarios
+      √ should validate nested objects and arrays (1 ms)
+      √ should handle deeply nested validation errors (1 ms)
+      √ should validate multiple constraint violations
+    Performance and Edge Cases
+      √ should handle large arrays efficiently (40 ms)
+      √ should handle deeply nested objects (1 ms)
+      √ should handle circular references gracefully
+      √ should handle null and undefined values correctly (1 ms)
+      √ should handle special number values
+      √ should handle empty strings and whitespace (1 ms)
+    Error Handling and Custom Messages
+      √ should use custom error messages
+      √ should prioritize custom messages over constraint messages
+      √ should handle constraint errors gracefully
+    Transform Function
+      √ should transform string to uppercase
+      √ should transform number to string
+      √ should validate after transformation
+      √ should handle transform function that is not a function (1 ms)
+
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+All files         |   93.33 |    94.44 |   96.49 |    93.2 |                   
+ base-template.js |   93.33 |    94.44 |   96.49 |    93.2 | 163,655-698       
+------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       73 passed, 73 total
+Snapshots:   0 total
+Time:        0.616 s, estimated 2 s
+Ran all test suites.
